@@ -1,262 +1,292 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Reservas - NexoU</title>
+    <link rel="stylesheet" href="/src/css/mis-reservas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <link rel="stylesheet" href="/src/css/mis-reservas.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
     <aside class="menu-lateral">
-      <header class="menu-lateral-cabecera">
-        <img
-          src="/src/images/logo-nexou.png"
-          alt="Logo Nexo"
-          class="menu-lateral-logo"
-        />
-      </header>
+        <header class="menu-lateral-cabecera">
+            <img src="/src/images/logo-nexou.png" alt="Logo Nexo" class="menu-lateral-logo">
+        </header>
 
-      <nav class="menu-lateral-navegacion">
-        <ul class="menu-lateral-lista">
-          <li class="menu-lateral-item">
-            <a href="./inicio.html" class="menu-lateral-enlace">
-              <img
-                src="/src/images/icono-inicio.png"
-                alt=""
-                class="menu-lateral-icono"
-              />
-              <p>Inicio</p>
-            </a>
-          </li>
-          <li class="menu-lateral-item">
-            <a href="./recursos-biblioteca.html" class="menu-lateral-enlace">
-              <img
-                src="/src/images/icono-libro-cerrado.png"
-                alt=""
-                class="menu-lateral-icono"
-              />
-              <p>Biblioteca</p>
-            </a>
-          </li>
-          <li class="menu-lateral-item">
-            <a href="./recursos-tecnologicos.html" class="menu-lateral-enlace">
-              <img
-                src="/src/images/icono-laptop.png"
-                alt=""
-                class="menu-lateral-icono"
-              />
-              <p>Tecnología</p>
-            </a>
-          </li>
-          <li class="menu-lateral-item menu-lateral-item-activo">
-            <a
-              href="./mis-reservas.html"
-              class="menu-lateral-enlace menu-lateral-enlace-con-notificacion"
-            >
-              <img
-                src="/src/images/icono-calendario.png"
-                alt=""
-                class="menu-lateral-icono-perfil"
-              />
-              <p>Reservas</p>
-              <strong class="menu-lateral-notificacion">3</strong>
-            </a>
-          </li>
-          <li class="menu-lateral-item">
-            <a href="./perfil.html" class="menu-lateral-enlace">
-              <img
-                src="/src/images/icono-perfil.png"
-                alt=""
-                class="menu-lateral-icono"
-              />
-              <p>Perfil</p>
-            </a>
-          </li>
-          <li class="menu-lateral-item">
-            <a href="./soporte.html" class="menu-lateral-enlace">
-              <img
-                src="/src/images/icono-soporte.png"
-                alt=""
-                class="menu-lateral-icono"
-              />
-              <p>Soporte</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="menu-lateral-navegacion">
+            <ul class="menu-lateral-lista">
+                <li class="menu-lateral-item">
+                    <a href="./inicio.html" class="menu-lateral-enlace">
+                        <img src="/src/images/icono-inicio.png" alt="" class="menu-lateral-icono">
+                        <p>Inicio</p>
+                    </a>
+                </li>
+                <li class="menu-lateral-item">
+                    <a href="./recursos-biblioteca.html" class="menu-lateral-enlace">
+                        <img src="/src/images/icono-libro-cerrado.png" alt="" class="menu-lateral-icono">
+                        <p>Biblioteca</p>
+                    </a>
+                </li>
+                <li class="menu-lateral-item">
+                    <a href="./recursos-tecnologicos.html" class="menu-lateral-enlace">
+                        <img src="/src/images/icono-laptop.png" alt="" class="menu-lateral-icono">
+                        <p>Tecnología</p>
+                    </a>
+                </li>
+                <li class="menu-lateral-item menu-lateral-item-activo">
+                    <a href="./mis-reservas.html" class="menu-lateral-enlace menu-lateral-enlace-con-notificacion">
+                        <img src="/src/images/icono-calendario.png" alt="" class="menu-lateral-icono-perfil">
+                        <p>Reservas</p>
+                        <strong class="menu-lateral-notificacion">3</strong>
+                    </a>
+                </li>
+                <li class="menu-lateral-item">
+                    <a href="./perfil.html" class="menu-lateral-enlace">
+                        <img src="/src/images/icono-perfil.png" alt="" class="menu-lateral-icono">
+                        <p>Perfil</p>
+                    </a>
+                </li>
+                <li class="menu-lateral-item">
+                    <a href="./soporte.html" class="menu-lateral-enlace">
+                        <img src="/src/images/icono-soporte.png" alt="" class="menu-lateral-icono">
+                        <p>Soporte</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-      <footer class="menu-lateral-pie">
-        <figure class="menu-lateral-usuario-actual">
-          <img
-            src="/src/images/imagen-perfil.png"
-            alt="Avatar de perfil"
-            class="menu-lateral-usuario-avatar"
-          />
-          <figcaption class="menu-lateral-usuario-info">
-            <p class="menu-lateral-usuario-nombre">Maria E. Gónzalez</p>
-            <p class="menu-lateral-usuario-rol">Estudiante activo</p>
-          </figcaption>
-        </figure>
-
-        <a href="../../index.html" class="menu-lateral-cerrar-sesion">
-          <img
-            src="/src/images/icono-cerrar-sesion.png"
-            alt=""
-            class="menu-lateral-icono-cerrar-sesion"
-          />
-          <p class="menu-lateral-cerrar-sesion-parrafo">Cerrar Sesión</p>
-        </a>
-      </footer>
+        <footer class="menu-lateral-pie">
+            <figure class="menu-lateral-usuario-actual">
+                <img src="/src/images/imagen-perfil.png" alt="Avatar de perfil" class="menu-lateral-usuario-avatar">
+                <figcaption class="menu-lateral-usuario-info">
+                    <p class="menu-lateral-usuario-nombre">Maria E. Gónzalez</p>
+                    <p class="menu-lateral-usuario-rol">Estudiante activo</p>
+                </figcaption>
+            </figure>
+            <a href="../../index.html" class="menu-lateral-cerrar-sesion">
+                <img src="/src/images/icono-cerrar-sesion.png" alt="" class="menu-lateral-icono-cerrar-sesion">
+                <p class="menu-lateral-cerrar-sesion-parrafo">Cerrar Sesión</p>
+            </a>
+        </footer>
     </aside>
-    <!-- Contenido Principal -->
+
     <main class="contenido-principal">
-      <!-- Cabecera -->
-      <header class="contenido-cabecera">
-        <h1 class="contenido-cabecera-titulo">Mis Reservas</h1>
-        <p class="contenido-cabecera-subtitulo">
-          Gestiona tus reservas activas e historial de préstamos
-        </p>
-      </header>
 
-      <!-- Estadísticas -->
-      <section class="reservas-estadisticas">
-        <article class="estadistica-card">
-          <p class="estadistica-numero">3</p>
-          <p class="estadistica-label">Reservas Activas</p>
-        </article>
-        <article class="estadistica-card">
-          <p class="estadistica-numero">12</p>
-          <p class="estadistica-label">Completadas este mes</p>
-        </article>
-        <article class="estadistica-card">
-          <p class="estadistica-numero">1</p>
-          <p class="estadistica-label">Pendiente de confirmación</p>
-        </article>
-      </section>
+        <header class="contenido-cabecera">
+            <h1 class="contenido-cabecera-titulo">Mis Reservas</h1>
+            <p class="contenido-cabecera-subtitulo">Gestiona tus reservas activas e historial de préstamos</p>
+        </header>
 
-      <!-- Tabs -->
-      <nav class="reservas-tabs">
-        <button class="tab-button activo">Reservas Activas</button>
-        <button class="tab-button">Historial</button>
-      </nav>
+        <!-- Estadísticas -->
+        <!-- Se agrego id="contador-activas" para que el JS pueda actualizar el numero -->
+        <section class="reservas-estadisticas">
+            <article class="estadistica-card">
+                <p class="estadistica-numero" id="contador-activas">3</p>
+                <p class="estadistica-label">Reservas Activas</p>
+            </article>
+            <article class="estadistica-card">
+                <p class="estadistica-numero">12</p>
+                <p class="estadistica-label">Completadas este mes</p>
+            </article>
+            <article class="estadistica-card">
+                <p class="estadistica-numero">1</p>
+                <p class="estadistica-label">Pendiente de confirmación</p>
+            </article>
+        </section>
 
-      <!-- Lista de Reservas -->
-      <section class="reservas-lista">
-        <!-- Reserva 1 -->
-        <article class="reserva-card">
-          <img
-            src="../images/computadora-portatil.png"
-            alt="MacBook Pro"
-            class="reserva-imagen"
-          />
-          
-          <figure class="reserva-contenido">
-            <div class="reserva-titulo-row">
-              <h3 class="reserva-titulo">MacBook Pro 13"</h3>
-            </div>
-            <p class="reserva-codigo">Código: R2024-001</p>
-            <div class="reserva-detalles">
-              <p class="reserva-detalle-item">Hoy</p>
-              <p class="reserva-detalle-item">14:00 - 18:00</p>
-              <p class="reserva-detalle-item">Biblioteca Central, Piso 2</p>
-            </div>
-          </figure>
-          <figure class="reserva-acciones">
-            <span class="reserva-estado confirmada">Confirmada</span>
-            <div class="reserva-botones">
-              <button class="btn-reserva btn-secundario">Ver detalles</button>
-              <button class="btn-reserva btn-primario">Extender</button>
-            </div>
-          </figure>
-        </article>
+        <nav class="reservas-tabs">
+            <button class="tab-button activo">Reservas Activas</button>
+            <button class="tab-button">Historial</button>
+        </nav>
 
-        <!-- Reserva 2 -->
-        <article class="reserva-card">
-          <img
-            src="../images/libro-abierto.png"
-            alt="Fundamentos de Programación"
-            class="reserva-imagen"
-          />
-          <figure class="reserva-contenido">
-            <div class="reserva-titulo-row">
-              <span class="reserva-icono-tipo">📚</span>
-              <h3 class="reserva-titulo">Fundamentos de Programación</h3>
-            </div>
-            <p class="reserva-codigo">Código: R2024-002</p>
-            <div class="reserva-detalles">
-              <p class="reserva-detalle-item">15 Sep</p>
-              <p class="reserva-detalle-item">Hasta 22 Sep</p>
-              <p class="reserva-detalle-item">Préstamo domiciliario</p>
-            </div>
-          </figure>
-          <figure class="reserva-acciones">
-            <span class="reserva-estado activa">Activa</span>
-            <div class="reserva-botones">
-              <button class="btn-reserva btn-secundario">Renovar</button>
-              <button class="btn-reserva btn-primario">Devolver</button>
-            </div>
-          </figure>
-        </article>
+        <!-- Lista de reservas -->
+        <!-- Se agrego id="lista-reservas" para que el JS pueda agregar tarjetas nuevas -->
+        <section class="reservas-lista" id="lista-reservas">
 
-        <!-- Reserva 3 -->
-        <article class="reserva-card">
-          <img
-            src="../images/proyector-epson.png"
-            alt="Proyector Epson"
-            class="reserva-imagen"
-          />
-          <figure class="reserva-contenido">
-            <div class="reserva-titulo-row">
-              <span class="reserva-icono-tipo">📽️</span>
-              <h3 class="reserva-titulo">Proyector Épson</h3>
-            </div>
-            <p class="reserva-codigo">Código: R2024-003</p>
-            <div class="reserva-detalles">
-              <p class="reserva-detalle-item">Mañana</p>
-              <p class="reserva-detalle-item">10:00 - 13:00</p>
-              <p class="reserva-detalle-item">Aula 205</p>
-            </div>
-          </figure>
-          <figure class="reserva-acciones">
-            <span class="reserva-estado pendiente">Pendiente</span>
-            <div class="reserva-botones">
-              <button class="btn-reserva btn-cancelar">Cancelar</button>
-              <button class="btn-reserva btn-confirmar">Confirmar</button>
-            </div>
-          </figure>
-        </article>
-      </section>
+            <article class="reserva-card">
+                <img src="../images/computadora-portatil.png" alt="MacBook Pro" class="reserva-imagen">
+                <figure class="reserva-contenido">
+                    <div class="reserva-titulo-row">
+                        <h3 class="reserva-titulo">MacBook Pro 13"</h3>
+                    </div>
+                    <p class="reserva-codigo">Código: R2024-001</p>
+                    <div class="reserva-detalles">
+                        <p class="reserva-detalle-item">Hoy</p>
+                        <p class="reserva-detalle-item">14:00 - 18:00</p>
+                        <p class="reserva-detalle-item">Biblioteca Central, Piso 2</p>
+                    </div>
+                </figure>
+                <figure class="reserva-acciones">
+                    <span class="reserva-estado confirmada">Confirmada</span>
+                    <div class="reserva-botones">
+                        <button class="btn-reserva btn-secundario">Ver detalles</button>
+                        <button class="btn-reserva btn-primario">Extender</button>
+                    </div>
+                </figure>
+            </article>
 
-      <!-- Acciones Rápidas -->
-      <section class="acciones-rapidas">
-        <h2 class="acciones-rapidas-titulo">Acciones Rápidas</h2>
-        <article class="acciones-grid">
-          <figure class="accion-card">
-            <div class="accion-icono">📖</div>
-            <p class="accion-texto">Reservar Libro</p>
-          </figure>
-          <figure class="accion-card">
-            <div class="accion-icono">💻</div>
-            <p class="accion-texto">Reservar Equipo</p>
-          </figure>
-          <figure class="accion-card">
-            <div class="accion-icono">📅</div>
-            <p class="accion-texto">Ver Calendario</p>
-          </figure>
-          <figure class="accion-card">
-            <div class="accion-icono">⏰</div>
-            <p class="accion-texto">Extender Préstamo</p>
-          </figure>
-        </article>
-      </section>
+            <article class="reserva-card">
+                <img src="../images/libro-abierto.png" alt="Fundamentos de Programación" class="reserva-imagen">
+                <figure class="reserva-contenido">
+                    <div class="reserva-titulo-row">
+                        <span class="reserva-icono-tipo">📚</span>
+                        <h3 class="reserva-titulo">Fundamentos de Programación</h3>
+                    </div>
+                    <p class="reserva-codigo">Código: R2024-002</p>
+                    <div class="reserva-detalles">
+                        <p class="reserva-detalle-item">15 Sep</p>
+                        <p class="reserva-detalle-item">Hasta 22 Sep</p>
+                        <p class="reserva-detalle-item">Préstamo domiciliario</p>
+                    </div>
+                </figure>
+                <figure class="reserva-acciones">
+                    <span class="reserva-estado activa">Activa</span>
+                    <div class="reserva-botones">
+                        <button class="btn-reserva btn-secundario">Renovar</button>
+                        <button class="btn-reserva btn-primario">Devolver</button>
+                    </div>
+                </figure>
+            </article>
+
+            <article class="reserva-card">
+                <img src="../images/proyector-epson.png" alt="Proyector Epson" class="reserva-imagen">
+                <figure class="reserva-contenido">
+                    <div class="reserva-titulo-row">
+                        <span class="reserva-icono-tipo">📽️</span>
+                        <h3 class="reserva-titulo">Proyector Épson</h3>
+                    </div>
+                    <p class="reserva-codigo">Código: R2024-003</p>
+                    <div class="reserva-detalles">
+                        <p class="reserva-detalle-item">Mañana</p>
+                        <p class="reserva-detalle-item">10:00 - 13:00</p>
+                        <p class="reserva-detalle-item">Aula 205</p>
+                    </div>
+                </figure>
+                <figure class="reserva-acciones">
+                    <span class="reserva-estado pendiente">Pendiente</span>
+                    <div class="reserva-botones">
+                        <button class="btn-reserva btn-cancelar" onclick="cancelarReserva(this)">Cancelar</button>
+                        <button class="btn-reserva btn-confirmar" onclick="confirmarEstado(this)">Confirmar</button>
+                    </div>
+                </figure>
+            </article>
+
+        </section>
+
+        <!-- Acciones Rapidas -->
+        <!-- Se agregaron ids a los botones de reservar para conectarlos con el JS -->
+        <section class="acciones-rapidas">
+            <h2 class="acciones-rapidas-titulo">Acciones Rápidas</h2>
+            <article class="acciones-grid">
+
+                <figure class="accion-card" id="btn-abrir-libro">
+                    <div class="accion-icono">📖</div>
+                    <p class="accion-texto">Reservar Libro</p>
+                </figure>
+
+                <figure class="accion-card" id="btn-abrir-equipo">
+                    <div class="accion-icono">💻</div>
+                    <p class="accion-texto">Reservar Equipo</p>
+                </figure>
+
+                <figure class="accion-card">
+                    <div class="accion-icono">📅</div>
+                    <p class="accion-texto">Ver Calendario</p>
+                </figure>
+
+                <figure class="accion-card">
+                    <div class="accion-icono">⏰</div>
+                    <p class="accion-texto">Extender Préstamo</p>
+                </figure>
+
+            </article>
+        </section>
+
     </main>
-  </body>
+
+
+    <!-- Modal de nueva reserva -->
+    <!-- Este bloque es nuevo, el JS lo controla con la clase .activo -->
+    <div class="modal-overlay" id="modal-nueva-reserva">
+        <div class="modal-contenedor">
+
+            <header class="modal-cabecera">
+                <h2 class="modal-titulo" id="modal-titulo">Nueva Reserva</h2>
+                <button class="modal-btn-cerrar" id="btn-cerrar-modal">✕</button>
+            </header>
+
+            <div class="modal-cuerpo">
+
+                <div class="campo-grupo">
+                    <label class="campo-label" for="input-nombre">Nombre del solicitante</label>
+                    <input type="text" id="input-nombre" class="campo-input" placeholder="Ej: María E. González">
+                </div>
+
+                <div class="campo-grupo">
+                    <label class="campo-label" for="select-recurso">Recurso a reservar</label>
+                    <select id="select-recurso" class="campo-input campo-select">
+                        <option value="">-- Selecciona un recurso --</option>
+                        <option value='MacBook Pro 13"' data-tipo="equipo"> MacBook Pro 13"</option>
+                        <option value="iPad Pro 12.9" data-tipo="equipo"> iPad Pro 12.9"</option>
+                        <option value='Monitor Dell 24"' data-tipo="equipo"> Monitor Dell 24"</option>
+                        <option value="Proyector Epson" data-tipo="equipo">Proyector Epson</option>
+                        <option value="Audífonos Sony" data-tipo="equipo">Audífonos Sony WH-1000XM5</option>
+                        <option value="Cámara Canon EOS" data-tipo="equipo"> Cámara Canon EOS</option>
+                        <option value="Fundamentos de Programación" data-tipo="libro"> Fundamentos de Programación</option>
+                        <option value="Cálculo Diferencial" data-tipo="libro"> Cálculo Diferencial</option>
+                        <option value="Historia del Arte" data-tipo="libro"> Historia del Arte</option>
+                        <option value="Inglés Técnico B2" data-tipo="libro"> Inglés Técnico B2</option>
+                    </select>
+                </div>
+
+                <div class="campo-grupo">
+                    <label class="campo-label" for="input-fecha">Fecha de reserva</label>
+                    <input type="date" id="input-fecha" class="campo-input">
+                </div>
+
+                <div class="campo-fila-doble">
+                    <div class="campo-grupo">
+                        <label class="campo-label" for="input-hora-inicio">Hora de inicio</label>
+                        <input type="time" id="input-hora-inicio" class="campo-input">
+                    </div>
+                    <div class="campo-grupo">
+                        <label class="campo-label" for="input-hora-fin">Hora de fin</label>
+                        <input type="time" id="input-hora-fin" class="campo-input">
+                    </div>
+                </div>
+
+                <div class="campo-grupo">
+                    <label class="campo-label" for="select-ubicacion">Lugar de retiro</label>
+                    <select id="select-ubicacion" class="campo-input campo-select">
+                        <option value="">-- Selecciona una ubicación --</option>
+                        <option value="Biblioteca Central, Piso 1">Biblioteca Central, Piso 1</option>
+                        <option value="Biblioteca Central, Piso 2">Biblioteca Central, Piso 2</option>
+                        <option value="Laboratorio de Cómputo A">Laboratorio de Cómputo A</option>
+                        <option value="Laboratorio de Cómputo B">Laboratorio de Cómputo B</option>
+                        <option value="Aula 205">Aula 205</option>
+                        <option value="Préstamo domiciliario">Préstamo domiciliario</option>
+                    </select>
+                </div>
+
+                <!-- Aqui el JS muestra los mensajes de error o exito -->
+                <div id="area-validacion"></div>
+
+            </div>
+
+            <footer class="modal-pie">
+                <button class="modal-btn-cancelar" onclick="cerrarModal()">Cancelar</button>
+                <button class="modal-btn-confirmar" id="btn-confirmar-reserva">Confirmar Reserva</button>
+            </footer>
+
+        </div>
+    </div>
+
+
+    <!-- JS al final del body para que el HTML ya exista cuando se cargue -->
+    <script src="/src/js/reservas.js"></script>
+
+</body>
 </html>
