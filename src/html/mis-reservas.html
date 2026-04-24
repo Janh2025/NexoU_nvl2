@@ -166,8 +166,8 @@
                 <figure class="reserva-acciones">
                     <span class="reserva-estado confirmada">Confirmada</span>
                     <div class="reserva-botones">
-                        <button class="btn-reserva btn-secundario">Ver detalles</button>
-                        <button class="btn-reserva btn-primario">Extender</button>
+                        <button class="btn-reserva btn-cancelar" onclick="cancelarReserva(this)">Cancelar</button>
+                        <button class="btn-reserva btn-confirmar" onclick="confirmarEstado(this)">Extender</button>
                     </div>
                 </figure>
             </article>
@@ -187,10 +187,10 @@
                     </div>
                 </figure>
                 <figure class="reserva-acciones">
-                    <span class="reserva-estado activa">Activa</span>
+                    <span class="reserva-estado pendiente">Pendiente</span>
                     <div class="reserva-botones">
-                        <button class="btn-reserva btn-secundario">Renovar</button>
-                        <button class="btn-reserva btn-primario">Devolver</button>
+                        <button class="btn-reserva btn-cancelar" onclick="cancelarReserva(this)">Cancelar</button>
+                        <button class="btn-reserva btn-confirmar" onclick="confirmarEstado(this)">Confirmar</button>
                     </div>
                 </figure>
             </article>
