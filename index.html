@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iniciar Sesión - Plataforma Educativa</title>
+    <title>Iniciar Sesión - NexoU</title>
     <link rel="stylesheet" href="src/css/index.css" />
     <link
       rel="stylesheet"
@@ -22,14 +22,13 @@
             <img src="src/images/logo-sin-fondo.png" alt="Logo N" />
           </div>
           <h1>Iniciar sesión</h1>
-          <p class="subtitulo">Accede a tu plataforma educativa</p>
           <div class="linea-separadora"></div>
         </header>
 
-        <form action="#" method="POST">
+        <form id="formLogin">
           <div class="grupo-input">
             <label for="usuario">
-              <i class="fa-solid fa-user-group"></i> o correo electrónico
+              <i class="fa-solid fa-user-group"></i> correo electrónico
             </label>
             <input
               type="text"
@@ -69,10 +68,12 @@
             </label>
           </div>
 
-          <button type="submit" class="btn-principal">
-            Iniciar sesión <i class="fa-solid fa-arrow-right"></i>
+          <button type="submit" class="btn-principal" id="btnLogin">
+            Iniciar sesión
           </button>
         </form>
+
+        <div id="areaResultados" style="margin-top: 15px; min-height: 20px;"></div>
 
         <footer class="pie-tarjeta">
           <button class="btn-secundario">
@@ -81,10 +82,11 @@
           </button>
 
           <p class="texto-ayuda">
-            ¿Necesitas ayuda? <a href="#">Contacta a</a>
+            ¿Necesitas ayuda? <a href="#">Contactar a soporte</a>
           </p>
         </footer>
       </section>
     </main>
+    <script src="src/js/login.js"></script>
   </body>
 </html>
