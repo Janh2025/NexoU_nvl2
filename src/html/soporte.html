@@ -1,83 +1,401 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soporte - NexoU</title>
-    
+
     <link rel="stylesheet" href="/src/css/soporte.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <aside class="menu-lateral">
-        
         <header class="menu-lateral-cabecera">
-            <img src="/src/images/logo-nexou.png" alt="Logo Nexo" class="menu-lateral-logo">
+            <img src="/src/images/logo-nexou.png" alt="Logo NexoU" class="menu-lateral-logo">
         </header>
-        
-        <nav class="menu-lateral-navegacion">
+
+        <nav class="menu-lateral-navegacion" aria-label="Navegación principal">
             <ul class="menu-lateral-lista">
                 <li class="menu-lateral-item">
                     <a href="./inicio.html" class="menu-lateral-enlace">
-                        <img src="/src/images/icono-inicio.png" alt="" class="menu-lateral-icono">
+                        <img src="/src/images/icono-inicio.png" alt="Icono Inicio" class="menu-lateral-icono">
                         <p>Inicio</p>
                     </a>
                 </li>
                 <li class="menu-lateral-item">
                     <a href="./recursos-biblioteca.html" class="menu-lateral-enlace">
-                        <img src="/src/images/icono-libro-cerrado.png" alt="" class="menu-lateral-icono">
+                        <img src="/src/images/icono-libro-cerrado.png" alt="Icono Biblioteca" class="menu-lateral-icono">
                         <p>Biblioteca</p>
                     </a>
                 </li>
                 <li class="menu-lateral-item">
                     <a href="./recursos-tecnologicos.html" class="menu-lateral-enlace">
-                        <img src="/src/images/icono-laptop.png" alt="" class="menu-lateral-icono">
+                        <img src="/src/images/icono-laptop.png" alt="Icono Tecnología" class="menu-lateral-icono">
                         <p>Tecnología</p>
                     </a>
                 </li>
                 <li class="menu-lateral-item">
                     <a href="./mis-reservas.html" class="menu-lateral-enlace menu-lateral-enlace-con-notificacion">
-                        <img src="/src/images/icono-calendario.png" alt="" class="menu-lateral-icono">
+                        <img src="/src/images/icono-calendario.png" alt="Icono Reservas" class="menu-lateral-icono">
                         <p>Reservas</p>
-                        <strong class="menu-lateral-notificacion">3</strong>
+                        <strong class="menu-lateral-notificacion" aria-label="3 notificaciones de reservas pendientes">3</strong>
                     </a>
                 </li>
                 <li class="menu-lateral-item">
                     <a href="./perfil.html" class="menu-lateral-enlace">
-                        <img src="/src/images/icono-perfil.png" alt="" class="menu-lateral-icono">
+                        <img src="/src/images/icono-perfil.png" alt="Icono Perfil" class="menu-lateral-icono">
                         <p>Perfil</p>
                     </a>
                 </li>
                 <li class="menu-lateral-item menu-lateral-item-activo">
-                    <a href="./soporte.html" class="menu-lateral-enlace">
-                        <img src="/src/images/icono-soporte.png" alt="" class="menu-lateral-icono-perfil">
+                    <a href="./soporte.html" class="menu-lateral-enlace" aria-current="page">
+                        <img src="/src/images/icono-soporte.png" alt="Icono Soporte" class="menu-lateral-icono-perfil">
                         <p>Soporte</p>
                     </a>
                 </li>
             </ul>
         </nav>
-        
+
         <footer class="menu-lateral-pie">
             <figure class="menu-lateral-usuario-actual">
-                <img src="/src/images/imagen-perfil.png" alt="Avatar de perfil" class="menu-lateral-usuario-avatar">
+                <img src="/src/images/imagen-perfil.png" alt="Avatar de perfil del usuario actual" class="menu-lateral-usuario-avatar">
                 <figcaption class="menu-lateral-usuario-info">
                     <p class="menu-lateral-usuario-nombre">Maria E. Gónzalez</p>
                     <p class="menu-lateral-usuario-rol">Estudiante activo</p>
                 </figcaption>
             </figure>
-            
+
             <a href="../../index.html" class="menu-lateral-cerrar-sesion">
-                <img src="/src/images/icono-cerrar-sesion.png" alt="" class="menu-lateral-icono-cerrar-sesion">
+                <img src="/src/images/icono-cerrar-sesion.png" alt="Icono Cerrar Sesión" class="menu-lateral-icono-cerrar-sesion">
                 <p class="menu-lateral-cerrar-sesion-parrafo">Cerrar Sesión</p>
             </a>
         </footer>
     </aside>
 
-    
+    <main class="contenido-principal">
+
+        <header class="contenido-cabecera">
+            <h1 class="contenido-cabecera-titulo">Soporte y Ayuda</h1>
+            <p class="contenido-cabecera-subtitulo">Encuentra respuestas a tus preguntas y obtén ayuda cuando la necesites.</p>
+        </header>
+
+        <nav class="sub-nav" aria-label="Secciones de soporte">
+            <a href="#faqs" class="sub-nav-item activo" data-target="faqs">Preguntas frecuentes</a>
+            <a href="#contacto" class="sub-nav-item" data-target="contacto">Contacto</a>
+            <a href="#guias" class="sub-nav-item" data-target="guias">Guías</a>
+            <a href="#ticket" class="sub-nav-item" data-target="ticket">Crear ticket</a>
+        </nav>
+
+        <section class="pestana-contenedor">
+
+            <article id="faqs" class="pestana-contenido visible" role="tabpanel" aria-labelledby="faqs-tab">
+
+                <header class="faq-search-bar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Buscar en preguntas frecuentes..." aria-label="Buscar preguntas frecuentes">
+                </header>
+
+                <section class="faq-acordeon-list">
+                    
+                    <section class="faq-section">
+                        <h2 class="faq-category-title">
+                            <i class="far fa-question-circle" aria-hidden="true"></i> Reservas
+                        </h2>
+                        <div class="faq-item open">
+                            <button class="faq-question open-question" aria-expanded="true" aria-controls="reserva-1" data-target="reserva-1">
+                                ¿Cómo puedo reservar un libro?<i class="fas fa-chevron-up arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer visible-content" id="reserva-1" role="region" aria-hidden="false">
+                                <p>Para reservar un libro, navegue a la sección 'Catálogo de Biblioteca', busque el libro deseado y haga clic en 'Reservar'. Debes estar autenticado con tu cuenta de estudiante.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="reserva-2" data-target="reserva-2">
+                                ¿Cuánto tiempo puedo tener un libro prestado?<i class="fas fa-chevron-down arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer" id="reserva-2" role="region" aria-hidden="true">
+                                <p>Los libros se pueden tener prestados por un período de 2 semanas, con posibilidad de renovar por una semana adicional si no hay lista de espera.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="reserva-3" data-target="reserva-3">
+                                ¿Puedo cancelar una reserva?<i class="fas fa-chevron-down arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer" id="reserva-3" role="region" aria-hidden="true">
+                                <p>Sí, puedes cancelar una reserva hasta 2 horas antes de la hora programada desde la sección 'Mis Reservas'.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="reserva-4" data-target="reserva-4">
+                                ¿Qué pasa si llego tarde a recoger mi reserva?<i class="fas fa-chevron-down arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer" id="reserva-4" role="region" aria-hidden="true">
+                                <p>Tienes un período de gracia de 15 minutos. Después de este tiempo, la reserva se cancelará automáticamente.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="faq-section">
+                        <h2 class="faq-category-title">
+                            <i class="far fa-question-circle" aria-hidden="true"></i> Equipos Tecnológicos
+                        </h2>
+                        <div class="faq-item open">
+                            <button class="faq-question open-question" aria-expanded="true" aria-controls="equipo-1" data-target="equipo-1">
+                                ¿Qué equipos están disponibles para reservar?<i class="fas fa-chevron-up arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer visible-content" id="equipo-1" role="region" aria-hidden="false">
+                                <p>Tenemos laptops, tablets, proyectores, cámaras, audífonos y monitores externos disponibles para préstamo académico.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="equipo-2" data-target="equipo-2">
+                                ¿Por cuánto tiempo puedo usar un equipo?<i class="fas fa-chevron-down arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer" id="equipo-2" role="region" aria-hidden="true">
+                                <p>Los equipos se pueden usar por periodos de 2 o 24 horas dependiendo del tipo de dispositivo. Los detalles específicos se muestran en cada equipo.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="equipo-3" data-target="equipo-3">
+                                ¿Qué hago si un equipo se daña durante mi préstamo?<i class="fas fa-chevron-down arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer" id="equipo-3" role="region" aria-hidden="true">
+                                <p>Reporte inmediatamente cualquier daño en la sección de soporte. No intentes repararlo tú mismo. Se evaluará si fue daño accidental o negligencia.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="faq-section">
+                        <h2 class="faq-category-title">
+                            <i class="far fa-question-circle" aria-hidden="true"></i> Cuenta y Perfil
+                        </h2>
+                        <div class="faq-item open">
+                            <button class="faq-question open-question" aria-expanded="true" aria-controls="perfil-1" data-target="perfil-1">
+                                ¿Cómo actualizo mi información personal?<i class="fas fa-chevron-up arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer visible-content" id="perfil-1" role="region" aria-hidden="false">
+                                <p>Ve a la sección 'Mi Perfil' y haz clic en 'Editar Perfil'. Podrás actualizar tu información de contacto y preferencias.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="perfil-2" data-target="perfil-2">
+                                ¿Cómo cambiar mi contraseña?<i class="fas fa-chevron-down arrow-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-answer" id="perfil-2" role="region" aria-hidden="true">
+                                <p>En la sección 'Mi Perfil', ve a la pestaña 'Configuración' y selecciona 'Cambiar contraseña'.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </section>
+            </article>
+
+
+            <article id="contacto" class="pestana-contenido grid-contacto" role="tabpanel" aria-labelledby="contacto-tab" hidden>
+                <section class="contacto-informacion">
+                    <header>
+                        <h2>Información de contacto</h2>
+                    </header>
+                    <address class="contacto-datos">
+                        <dl class="contacto-dato-item">
+                            <dt><i class="fas fa-phone-alt contacto-icono icono-telefono" aria-hidden="true"></i> Teléfono</dt>
+                            <dd>+57 (1) 234-5678</dd>
+                        </dl>
+                        <dl class="contacto-dato-item">
+                            <dt><i class="fas fa-envelope contacto-icono" aria-hidden="true"></i> Correo Electrónico</dt>
+                            <dd><a href="mailto:soporte@uninexu.edu.co">soporte@uninexu.edu.co</a></dd>
+                        </dl>
+                        <dl class="contacto-dato-item">
+                            <dt><i class="fab fa-whatsapp contacto-icono" aria-hidden="true"></i> WhatsApp</dt>
+                            <dd>+57 300 123 4567</dd>
+                        </dl>
+                        <dl class="contacto-dato-item">
+                            <dt><i class="fas fa-clock contacto-icono" aria-hidden="true"></i> Horario de Atención</dt>
+                            <dd>Lunes a Viernes: 8:00 a.m. - 6:00 p.m.</dd>
+                        </dl>
+                        <dl class="contacto-dato-item">
+                            <dt><i class="fas fa-map-marker-alt contacto-icono" aria-hidden="true"></i> Ubicación</dt>
+                            <dd>Biblioteca Central, Piso 1, Información</dd>
+                        </dl>
+                    </address>
+                </section>
+
+                <section class="contacto-acciones">
+                    <header>
+                        <h2>Contacto rápido</h2>
+                    </header>
+                    <nav class="acciones-nav" aria-label="Acciones de contacto rápido">
+                        <a href="tel:+5712345678" class="accion-boton boton-llamar">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i> Llamar ahora
+                        </a>
+                        <a href="mailto:soporte@uninexu.edu.co" class="accion-boton boton-correo">
+                            <i class="fas fa-envelope" aria-hidden="true"></i> Enviar correo
+                        </a>
+                        <a href="https://wa.me/573001234567" target="_blank" class="accion-boton boton-whatsapp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat de WhatsApp
+                        </a>
+                    </nav>
+
+                    <section class="estado-servicio" aria-labelledby="estado-servicio-titulo">
+                        <h3 id="estado-servicio-titulo">Estado del Servicio</h3>
+                        <p class="estado-ok"><i class="fas fa-circle" aria-hidden="true"></i> Todos los servicios operativos</p>
+                    </section>
+                </section>
+            </article>
+
+            <article id="guias" class="pestana-contenido" role="tabpanel" aria-labelledby="guias-tab" hidden>
+                <section class="guias-documentos grid-guias">
+                    <figure class="guia-item">
+                        <i class="fas fa-book-open guia-icono" aria-hidden="true"></i>
+                        <figcaption>
+                            <h3>Guía de Inicio Rápido</h3>
+                            <p>Aprende lo básico para comenzar a usar el sistema</p>
+                        </figcaption>
+                        <a href="#" class="boton-descarga" role="button" download>
+                            <i class="fas fa-download" aria-hidden="true"></i> Descargar
+                        </a>
+                    </figure>
+                    <figure class="guia-item">
+                        <i class="fas fa-cloud-download-alt guia-icono" aria-hidden="true"></i>
+                        <figcaption>
+                            <h3>Manual de usuario completo</h3>
+                            <p>Documentación detallada de todas las funcionalidades.</p>
+                        </figcaption>
+                        <a href="#" class="boton-descarga" role="button" download>
+                            <i class="fas fa-download" aria-hidden="true"></i> Descargar
+                        </a>
+                    </figure>
+                    <figure class="guia-item">
+                        <i class="fas fa-file-contract guia-icono" aria-hidden="true"></i>
+                        <figcaption>
+                            <h3>Políticas de Uso</h3>
+                            <p>Términos y condiciones para el uso de recursos.</p>
+                        </figcaption>
+                        <a href="#" class="boton-descarga" role="button" download>
+                            <i class="fas fa-download" aria-hidden="true"></i> Descargar
+                        </a>
+                    </figure>
+                </section>
+
+
+                <section class="guias-videotutoriales">
+                    <h2>Videotutoriales</h2>
+                    <figure class="video-item-grid">
+                        <figure class="video-item">
+                            <i class="fas fa-video video-icono" aria-hidden="true"></i>
+                            <figcaption>
+                                <h3>Cómo hacer tu primera reserva</h3>
+                                <p>Tutorial paso a paso para reservar libros y equipos</p>
+                            </figcaption>
+                            <a href="#" class="boton-video" role="button" aria-label="Ver video: Cómo hacer tu primera reserva">
+                                <i class="fas fa-play" aria-hidden="true"></i> Ver video
+                            </a>
+                        </figure>
+                        <figure class="video-item">
+                            <i class="fas fa-video video-icono" aria-hidden="true"></i>
+                            <figcaption>
+                                <h3>Gestión de reservas</h3>
+                                <p>Aprende a gestionar, extender y cancelar reservas</p>
+                            </figcaption>
+                            <a href="#" class="boton-video" role="button" aria-label="Ver video: Gestión de reservas">
+                                <i class="fas fa-play" aria-hidden="true"></i> Ver video
+                            </a>
+                        </figure>
+                    </figure>
+                </section>
+            </article>
+
+
+            <article id="ticket" class="pestana-contenido" role="tabpanel" aria-labelledby="ticket-tab" hidden>
+                <form action="#" method="POST" class="formulario-ticket">
+                    <header>
+                        <h2>Crear Ticket de Soporte</h2>
+                        <p>Describe tu problema y nuestro equipo te ayudará lo antes posible</p>
+                    </header>
+
+                    <fieldset class="form-grupo form-grupo-inline">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+                    </fieldset>
+
+                    <fieldset class="form-grupo form-grupo-inline">
+                        <label for="categoria">Categoría del problema</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Selecciona una categoría</option>
+                            <option value="reserva">Problema con reservas</option>
+                            <option value="tecnico">Problema técnico</option>
+                            <option value="equipo">Problema con equipo</option>
+                            <option value="cuenta">Problema con cuenta</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="otro">Otro</option>
+                        </select>
+
+
+                        <label for="prioridad">Prioridad</label>
+                        <select id="prioridad" name="prioridad" required>
+                            <option value="" disabled selected>Selecciona la prioridad</option>
+                            <option value="baja">Baja</option>
+                            <option value="media">Media</option>
+                            <option value="alta">Alta</option>
+                            <option value="urgente">Urgente</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset class="form-grupo">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Resumen corto del problema" required>
+                    </fieldset>
+
+
+                    <fieldset class="form-grupo">
+                        <label for="descripcion">Descripción del problema</label>
+                        <textarea id="descripcion" name="descripcion" rows="6" placeholder="Detalla el problema o describe la sugerencia..." required></textarea>
+                    </fieldset>
+
+                    <footer class="ticket-pie-form">
+                        <button type="submit" class="boton-enviar-ticket">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Ticket
+                        </button>
+                    </footer>
+
+                    <section class="mis-entradas" aria-labelledby="mis-entradas-titulo">
+                        <h3 id="mis-entradas-titulo">Mis entradas</h3>
+                        <article class="entrada-item">
+                            <header>
+                                <h4>Problema con reservas de laptop</h4>
+                                <p class="entrada-info">Ticket: A0324-987 | Creado hace 3 días</p>
+                            </header>
+                            <p class="entrada-estado estado-progreso">Sin progreso</p>
+                        </article>
+                        <article class="entrada-item">
+                            <header>
+                                <h4>Sugerencia: Más tabletas disponibles</h4>
+                                <p class="entrada-info">Ticket: A0324-990 | Creado hace 1 semana</p>
+                            </header>
+                            <p class="entrada-estado estado-resuelto">Resuelto</p>
+                        </article>
+                    </section>
+                </form>
+            </article>
+
+
+        </section>
+
+    </main>
+
+    <script src="/src/js/soporte.js"></script>
 
 </body>
+
 </html>
