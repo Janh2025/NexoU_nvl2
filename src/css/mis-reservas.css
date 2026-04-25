@@ -673,3 +673,262 @@ ESTILOS DEL CONTENIDO PRINCIPAL (MAIN)
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==============================================
+ESTILOS DEL MODAL DE NUEVA RESERVA
+==============================================
+*/
+
+/* --- Fondo oscuro del modal --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(1, 26, 66, 0.55);
+    /* --azul-marino-oscuro con transparencia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+/* cuando el JS agrega la clase .activo se muestra */
+.modal-overlay.activo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* --- Caja blanca del modal --- */
+.modal-contenedor {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(20px);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.activo .modal-contenedor {
+    transform: translateY(0);
+}
+
+/* --- Cabecera del modal --- */
+.modal-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid #E5E7EB;
+    /* --color-borde */
+}
+
+.modal-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #011A42;
+    /* --azul-marino-oscuro */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-btn-cerrar {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    color: #6B7280;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.modal-btn-cerrar:hover {
+    background-color: #FEE2E2;
+    border-color: #FCA5A5;
+    color: #DC2626;
+}
+
+/* --- Cuerpo con los campos --- */
+.modal-cuerpo {
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Cada campo (label + input) --- */
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.campo-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #D1D5DB;
+    /* --color-borde */
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #011A42;
+    background-color: #FAFAFA;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.campo-input:focus {
+    border-color: #011A42;
+    background-color: #FFFFFF;
+}
+
+.campo-input::placeholder {
+    color: #9CA3AF;
+}
+
+/* el select tiene una flechita */
+.campo-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+}
+
+/* --- Fila de dos columnas para las horas --- */
+.campo-fila-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* --- Area donde el JS escribe los mensajes --- */
+#area-validacion {
+    min-height: 0;
+}
+
+.mensaje-validacion {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.mensaje-error {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #FECACA;
+}
+
+.mensaje-exito {
+    background-color: #D1FAE5;
+    color: #065F46;
+    border: 1px solid #A7F3D0;
+}
+
+.mensaje-bloqueado {
+    background-color: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+}
+
+/* --- Pie del modal con los botones --- */
+.modal-pie {
+    padding: 20px 28px 24px;
+    border-top: 1px solid #E5E7EB;
+    /* --color-borde */
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.modal-btn-cancelar {
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.15s ease;
+}
+
+.modal-btn-cancelar:hover {
+    background-color: #F9FAFB;
+}
+
+.modal-btn-confirmar {
+    padding: 10px 28px;
+    border-radius: 8px;
+    background-color: #011A42;
+    /* --azul-marino-oscuro */
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.modal-btn-confirmar:hover {
+    background-color: #02255E;
+}
+
+.modal-btn-confirmar:disabled {
+    background-color: #9CA3AF;
+    cursor: not-allowed;
+}
+
+/* --- Tarjetas nuevas creadas por el JS --- */
+/* empiezan invisibles, el JS agrega .visible para mostrarlas */
+.reserva-card-nueva {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-left: 4px solid #D49D28;
+    /* --mostaza-dorado */
+}
+
+.reserva-card-nueva.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* imagen de reemplazo para tarjetas nuevas que no tienen foto */
+.reserva-imagen-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #F3F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+/* texto del nombre del solicitante */
+.reserva-solicitante {
+    font-size: 12px;
+    color: #9CA3AF;
+    margin-top: 4px;
+}
+
+.reserva-solicitante strong {
+    color: #6B7280;
+}
